@@ -1,0 +1,9 @@
+{
+    "brokerType": "rabbitmq",
+    "brokerProtocol": "amqp",
+    "brokerHost": "20.213.120.91",
+    "brokerPort": 5672,
+    "apiUrl": "http://20.213.120.91:15672/api",
+    "brokerUsername": "guest",
+    "brokerPassword": "guest"
+}

@@ -1,0 +1,6 @@
+{
+    "url": "jdbc:mysql://leisadb.mysql.database.azure.com:3306/leisa",
+    "username": "lei",
+    "password": "mahirgamal123#",
+    "driver_class_name": "com.mysql.cj.jdbc.Driver"
+}
