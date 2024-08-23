@@ -99,7 +99,7 @@ The application is structured using a modular architecture:
    - Use the `PublishMessage` class to send messages to the appropriate queue.
    - Example usage:
      ```java
-     PublishMessage.(Username, Password, queueMappingRequest.getEvent, auth.getId, jsonMessage);
+     PublishMessage.publish(Username, Password, queueMappingRequest.getEvent, auth.getId, jsonMessage);
      ```
 
 3. **Authorisation:**
