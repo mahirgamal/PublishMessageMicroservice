@@ -19,12 +19,26 @@ The `PublishMessageMicroservice` project is a Java-based microservice designed f
 - **Message Publishing**: Publish messages to designated queues with robust handling.
 - **Authorisation**: Implement secure access control to manage who can publish messages.
 
-## Architecture
+# Architecture
 
-The application is structured using a modular architecture:
+The application is structured using a modular architecture, aligning with Domain-Driven Design (DDD) principles:
 
-1. **Function Layer (`com.function`)**: Contains utility functions and manages the mapping of queue requests.
-2. **Domain Layer (`com.domain`)**: Responsible for publishing messages to queues and handling authorisation processes.
+### 1. Function Layer (`com.function`)
+
+- **Purpose**: This layer acts as the Application Layer in DDD. It contains utility functions and is responsible for orchestrating the application's operations, such as managing the mapping of queue requests.
+
+- **Components**:
+  - **`Function.java`**: Contains core utility functions that manage the application flow and coordinate between different components.
+  - **`QueueMappingRequest.java`**: Handles the mapping of incoming queue requests, acting as an application service that processes input data and routes it to the appropriate domain services.
+
+### 2. Domain Layer (`com.domain`)
+
+- **Purpose**: This layer is the heart of the application, containing the business logic and rules. It is responsible for handling the core business concerns such as publishing messages to queues and authorisation processes.
+
+- **Components**:
+  - **`PublishMessage.java`**: Represents the domain service responsible for the business logic related to publishing messages. It encapsulates the rules and workflows needed to send messages to the queues.
+  - **`Authorisation.java`**: Manages the authorisation logic, ensuring that only authorised requests are processed. This domain service enforces the security and access control policies of the application.
+
 
 ## Project Structure
 
